@@ -1,0 +1,161 @@
+/* 🍎 Mori-kei × Igari theme (food inspired) */
+:root {
+    --apple-red: #e57373;
+    --blush-pink: #f7c5c5;
+    --milk-cream: #fff9f6;
+    --forest-green: #c5d7a0;
+    --wood-brown: #b6917d;
+    --pastry-beige: #f2e2d2;
+    --shadow-soft: rgba(214, 160, 160, 0.3);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background-image: url(https://i.pinimg.com/736x/4d/bd/1b/4dbd1b6f1395e7c3518d4ca8ecb571f6.jpg);
+    color: #4b3c3d;
+    text-align: center;
+    padding: 40px;
+    animation: fadeIn 1.2s ease-out; 
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover;
+}
+
+/* 🍎 Title & Description */
+h1 {
+    color: var(--apple-red);
+    font-weight: 600;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    animation: floatDown 1s ease-in-out;
+    background-color: white;
+}
+
+p {
+    max-width: 600px;
+    margin: 0 auto 30px;
+    font-size: 14px;
+    color: #6b5e61;
+    line-height: 1.6;
+}
+
+/* 🍰 Info + Subject Sections */
+.info, #subjects {
+    background: var(--milk-cream);
+    box-shadow: 0 4px 12px var(--shadow-soft);
+    border-radius: 20px;
+    padding: 25px;
+    width: 80%;
+    max-width: 650px;
+    margin: 20px auto;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 2px solid var(--blush-pink);
+}
+
+.info:hover, #subjects:hover {
+    transform: scale(1.02);
+    box-shadow: 0 6px 15px var(--shadow-soft);
+}
+
+/* 🍏 Headings inside boxes */
+h3 {
+    color: var(--wood-brown);
+    font-weight: 600;
+    margin-bottom: 15px;
+}
+
+/* 🧺 Inputs layout - labels and inputs aligned */
+#subjects form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px 40px;
+    justify-items: center;
+    align-items: center;
+}
+
+/* Pair each label and input side by side */
+#subjects form .subject-pair {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 260px;
+}
+
+/* Label styling */
+label {
+    font-weight: 500;
+    color: var(--wood-brown);
+    font-size: 15px;
+}
+
+/* Input styling */
+input[type="number"] {
+    border: 2px solid var(--forest-green);
+    border-radius: 10px;
+    padding: 8px 12px;
+    width: 100px;
+    background: #fffdfb;
+    transition: all 0.3s ease;
+}
+
+ input[type="text"]{
+    border: 2px solid var(--forest-green);
+    border-radius: 10px;
+    padding: 8px 12px;
+    width: 100%;
+    background: #fffdfb;
+    transition: all 0.3s ease;
+ }
+
+input[type="number"]:focus, input[type="text"]:focus {
+    border-color: var(--apple-red);
+    outline: none;
+    background: var(--blush-pink);
+}
+
+/* 🍯 Buttons */
+button, input[type="button"] {
+    background: var(--apple-red);
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+button:hover, input[type="button"]:hover {
+    background: var(--forest-green);
+    color: #4b3c3d;
+    transform: translateY(-2px);
+}
+
+/* 🍵 Output box */
+#output, #info {
+    margin-top: 20px;
+    background: #fffdfb;
+    border-radius: 15px;
+    padding: 15px;
+    border: 1.5px solid var(--forest-green);
+    box-shadow: 0 3px 6px var(--shadow-soft);
+    animation: popIn 0.8s ease;
+}
+
+/* 🌸 Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes floatDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes popIn {
+    from { transform: scale(0.95); opacity: 0; }
+    to { transform: scale(1); opacity: 1; }
+}

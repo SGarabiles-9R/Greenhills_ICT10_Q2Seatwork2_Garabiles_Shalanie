@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Grade Calculator
+    </title>
+
+<!-- Bootstrap -->
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+  >
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Fonts -->
+  <link href="https://fonts.bunny.net/css?family=Poppins:400,600&display=swap" rel="stylesheet">
+
+<!-- PyScript -->
+  <link rel="stylesheet" href="https://pyscript.net/releases/2025.7.3/core.css">
+  <script type="module" src="https://pyscript.net/releases/2025.7.3/core.js"></script>
+
+  <!-- External CSS -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1> - Student Grade Calculator - </h1>
+        <p><strong> General Weighted Average (GWA) is a standard measure of academic performance used in the Philippines. It is calculated by averaging all final course grades, weighted by their credit units, for a specific semester or academic program.</strong></p>
+
+    <div class="info">
+        <h3>Student Information</h3>
+    <form>
+        <label for="input1">Name:</label><br>
+        <input type="text" id="input1" placeholder="Enter your name"><br>
+        <label for="input2">Section:</label><br>
+        <input type="text" id="input2" placeholder="Enter your script"><br>
+        <input type="button" value="Collect" py-click="getting_info">
+    </form>
+    </div>
+
+
+
+    <div id="subjects">
+        <h3>Enter your Grades</h3>
+    <form>
+        <label for="subj1">English</label>
+        <input type="number" id="subj1" ><br>
+
+        <label for="subj2">Math</label>
+        <input type="number" id="subj2" ><br>
+
+        <label for="subj3">Science</label>
+        <input type="number" id="subj3" ><br>  
+
+        <label for="subj4">Filipino</label>
+        <input type="number" id="subj4" ><br>
+        
+        <label for="subj5">Social Studies</label>
+        <input type="number" id="subj5" ><br>
+
+        <label for="subj6">I.C.T.</label>
+        <input type="number" id="subj6" ><br>
+
+        <label for="subj8">T.L.E.</label>
+        <input type="number" id="subj7" ><br>
+
+        <label for="subj10">Physical Education</label>
+        <input type="number" id="subj8" ><br>
+
+        <label for="subj7">Music</label>
+        <input type="number" id="subj9" ><br>
+
+        <label for="subj9">Values Education</label>
+        <input type="number" id="subj10" ><br>
+    </form>
+
+    </div>
+
+    <br>
+
+    <div id="result">
+        <button py-click="calculating_grades">Calculate for GWA</button>
+        <div id="info"></div>
+        <div id="output"></div>
+        <img src="https://media.tenor.com/mcpNuaDanYwAAAAi/duck-ducky.gif">
+
+    </div>
+
+    <py-script src="main.py"></py-script>
+</body>
+</html>
